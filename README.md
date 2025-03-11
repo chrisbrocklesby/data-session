@@ -7,7 +7,7 @@ This project script is designed to work with HTML or HTMX, using `data-` attribu
 - **Session Storage**: Persists form data in `sessionStorage` for the duration of the browser session.
 - **Local Storage**: Persists form data in `localStorage` indefinitely (until manually cleared).
 - **Automatic Data Restoration**: Restores saved data when the page is reloaded or revisited.
-- **HTMX Integration**: Works seamlessly with HTMX for dynamic content updates.
+- **HTMX Integration**: Works seamlessly with HTMX for dynamic content updates. (Optional)
 - **Reset Functionality**: Allows resetting stored data for both session and local storage.
 
 ## How It Works
