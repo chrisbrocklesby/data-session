@@ -51,6 +51,9 @@ The script will automatically handle storing, restoring, and resetting the form 
 ## Group Data
 You can set data ids in groups with prefix eg: search_query, contact_email so you don't over ride simular names.
 
+## Example
+Example: https://chrisbrocklesby.github.io/data-session/
+
 ## HTMX Support
 If you are using HTMX, the script will automatically reinitialize the form elements after HTMX events:
 
