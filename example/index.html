@@ -32,22 +32,11 @@
 
         <button type="submit">Submit</button>
 
-        <br />
-        <br />
-        <hr />
-        <br />
+        <br /><br />
+        <hr /><br />
+
         <button type="reset" onclick="resetData()">Reset Page Data</button>
     </form>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            setDataSession('time', new Date().getTime());
-
-
-            const time = getDataSession('time')
-            console.log("JS getDataSession('time') Example: ", time);
-        });
-    </script>
 
 </body>
 

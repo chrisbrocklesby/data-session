@@ -22,23 +22,13 @@ Resets all form elements with a `data-id` attribute and removes their values fro
 
 Initializes the form elements by restoring their values from `sessionStorage` and setting up event listeners to store data on change and keyup events.
 
-### Helper Functions
-
-#### `clearDataSession()`
-
-Clears all data stored in `sessionStorage`.
-
-#### `getDataSession(dataId)`
-
-Retrieves the value associated with the given `dataId` from `sessionStorage`.
-
-#### `setDataSession(dataId, dataValue)`
-
-Stores the given `dataValue` in `sessionStorage` under the given `dataId`.
-
-#### `removeDataSession(dataId)`
-
-Removes the value associated with the given `dataId` from `sessionStorage`.
+### Note at this scripts heart its standard js sessionStorage with a prefix of data_id_
+```js
+sessionStorage.setItem('data_id_example', 'new value');
+ssessionStorage.getItem('data_id_example');
+sessionStorage.removeItem('data_id_example');
+sessionStorage.clear();
+```
 
 ## Usage
 
