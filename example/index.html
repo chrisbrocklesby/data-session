@@ -10,19 +10,24 @@
 </head>
 
 <body>
-    <button hx-get="./click.html" hx-swap="outerHTML">HTMX Click Me</button>
+    <h1>Examples</h1>
+    <button hx-get="./click.html" hx-swap="outerHTML">HTMX Test - Click Me</button>
+    <hr />
 
-    <form hx-get="./form.html" hx-target="body">
+    <h2>Data Session Storage Form Example</h2>
+    <p>Session Data Key <code>data-session="name"</code> this sets the key "data-session:name" in session storage.
+    </p>
+    <form hx-get="./form.html" hx-target="form">
 
-        <input data-id="name" type="text" name="name" placeholder="Name">
+        <input data-session="name" type="text" name="name" placeholder="Name">
 
         <br />
 
-        <textarea data-id="message" name="message" placeholder="Message"></textarea>
+        <textarea data-session="message" name="message" placeholder="Message"></textarea>
 
         <br />
 
-        <select data-id="color" name="color">
+        <select data-session="color" name="color">
             <option value="red">Red</option>
             <option value="green">Green</option>
             <option value="blue">Blue</option>
@@ -32,11 +37,42 @@
 
         <button type="submit">Submit</button>
 
-        <br /><br />
-        <hr /><br />
 
-        <button type="reset" onclick="resetData()">Reset Page Data</button>
+        <button type="reset" onclick="resetData()">Reset Session Data</button>
     </form>
+
+    <br /><br />
+    <hr /><br />
+
+    <h2>Data Local Storage Form Example</h2>
+    <p>Local Data Key <code>data-local="name"</code> this sets the key "data-local:name" in local storage.
+    </p>
+    <form hx-get="./form.html" hx-target="body">
+
+        <input data-local="name" type="text" name="name" placeholder="Name">
+
+        <br />
+
+        <textarea data-local="message" name="message" placeholder="Message"></textarea>
+
+        <br />
+
+        <select data-local="color" name="color">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+
+        <br />
+
+        <button type="submit">Submit</button>
+
+        <button type="reset" onclick="resetData()">Reset Local Data</button>
+
+    </form>
+
+    <br /><br />
+    <hr /><br />
 
 </body>
 
