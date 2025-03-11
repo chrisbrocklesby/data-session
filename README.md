@@ -22,11 +22,11 @@ Resets all form elements with a `data-id` attribute and removes their values fro
 
 Initializes the form elements by restoring their values from `sessionStorage` and setting up event listeners to store data on change and keyup events.
 
-### Note at this scripts heart its standard js sessionStorage with a prefix of data_id_
+### Note at this scripts heart its standard js sessionStorage with a prefix of data-id:
 ```js
-sessionStorage.setItem('data_id_example', 'new value');
-ssessionStorage.getItem('data_id_example');
-sessionStorage.removeItem('data_id_example');
+sessionStorage.setItem('data-id:example', 'new value');
+ssessionStorage.getItem('data-id:example');
+sessionStorage.removeItem('data-id:example');
 sessionStorage.clear();
 ```
 
@@ -47,9 +47,6 @@ or direct via https://chrisbrocklesby.github.io/data-session/datasession.min.js
 ```
 
 The script will automatically handle storing, restoring, and resetting the form data.
-
-## Group Data
-You can set data ids in groups with prefix eg: search_query, contact_email so you don't over ride simular names.
 
 ## Example
 Example: https://chrisbrocklesby.github.io/data-session/

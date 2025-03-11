@@ -1,12 +1,12 @@
 // Core Functions to store, restore and reset form data elements in sessionStorage
 function storeData(element) {
     const id = element.getAttribute('data-id');
-    sessionStorage.setItem('data_id_' + id, element.value);
+    sessionStorage.setItem('data-id:' + id, element.value);
 }
 
 function restoreData(element) {
     const id = element.getAttribute('data-id');
-    const savedValue = sessionStorage.getItem('data_id_' + id);
+    const savedValue = sessionStorage.getItem('data-id:' + id);
     if (savedValue && (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'SELECT')) {
         element.value = savedValue;
     }
@@ -15,7 +15,7 @@ function restoreData(element) {
 function resetData() {
     document.querySelectorAll('[data-id]').forEach(element => {
         const id = element.getAttribute('data-id');
-        sessionStorage.removeItem('data_id_' + id);
+        sessionStorage.removeItem('data-id:' + id);
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA' || element.tagName === 'SELECT') {
             element.value = '';
         }
