@@ -32,6 +32,23 @@ function initData() {
     });
 }
 
+// Helper Functions
+function clearDataSession() {
+    sessionStorage.clear();
+}
+
+function getDataSession(dataId) {
+    return sessionStorage.getItem('data_id_' + dataId);
+}
+
+function setDataSession(dataId, dataValue) {
+    sessionStorage.setItem('data_id_' + dataId, dataValue);
+}
+
+function removeDataSession(dataId) {
+    sessionStorage.removeItem('data_id_' + dataId);
+}
+
 // Initial Data Restore
 document.addEventListener('DOMContentLoaded', initData);
 window.addEventListener('popstate', () => setTimeout(initData, 0));
