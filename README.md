@@ -49,7 +49,7 @@ or direct via https://chrisbrocklesby.github.io/data-session/datasession.min.js
 The script will automatically handle storing, restoring, and resetting the form data.
 
 ## Example
-Example: (https://chrisbrocklesby.github.io/data-session/)[https://chrisbrocklesby.github.io/data-session/]
+Example: [https://chrisbrocklesby.github.io/data-session/](https://chrisbrocklesby.github.io/data-session/)
 
 ## HTMX Support
 If you are using HTMX, the script will automatically reinitialize the form elements after HTMX events:
