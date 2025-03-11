@@ -40,7 +40,10 @@ Include the script in your HTML:
 Add data-session or data-local attributes to your form elements:
 
 ```html
+<!-- Storing data in sessionStorage under the key 'data-session:name' -->
 <input data-session="name" type="text" name="name" placeholder="Name">
+
+<!-- Storing data in localStorage under the key 'data-local:message' -->
 <textarea data-local="message" name="message" placeholder="Message"></textarea>
 ```
 Use the resetData function to clear stored data:
