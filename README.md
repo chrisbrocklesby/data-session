@@ -23,6 +23,7 @@ Initializes the form elements by restoring their values from `sessionStorage` an
 ## Usage
 
 Include the `datasession.js` script in your HTML file:
+or direct via https://chrisbrocklesby.github.io/data-session/datasession.min.js
 
 ```html
 <script src="datasession.js"></script>
