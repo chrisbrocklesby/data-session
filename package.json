@@ -1,0 +1,14 @@
+{
+    "name": "data-session",
+    "version": "1.0.0",
+    "description": "A script to store, restore, and reset form data elements in sessionStorage.",
+    "main": "datasession.js",
+    "scripts": {
+        "minify": "uglifyjs datasession.js -o datasession.min.js"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+        "uglify-js": "^3.14.5"
+    }
+}
