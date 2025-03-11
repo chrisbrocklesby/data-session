@@ -1,12 +1,12 @@
 {
-    "name": "data-session",
+    "name": "data-store",
     "version": "1.0.0",
-    "description": "A script to store, restore, and reset form data elements in sessionStorage.",
-    "main": "datasession.js",
+    "description": "A script to store, restore, and reset form data elements in browser storage.",
+    "main": "datastore.js",
     "scripts": {
-        "minify": "uglifyjs datasession.js -o datasession.min.js"
+        "minify": "uglifyjs datastore.js -o datastore.min.js"
     },
-    "author": "Your Name",
+    "author": "Chris Brocklesby",
     "license": "MIT",
     "devDependencies": {
         "uglify-js": "^3.14.5"

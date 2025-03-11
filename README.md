@@ -1,4 +1,4 @@
-# HTML Data Storage (Local & Session)
+# HTML Data Store (Local & Session)
 
 This project script is designed to work with HTML or HTMX, using `data-` attributes direct in your HTML code to store data in either `localStorage` (`data-local="name"`) or `sessionStorage` (`data-session="name"`). It automatically saves and restores data from input, textarea, or select fields by simply setting the appropriate keys. Data is restored on back button navigation or HTMX/AJAX-type requests. You can choose how to store the data: use `localStorage` for long-term persistence or `sessionStorage` for temporary storage.
 
