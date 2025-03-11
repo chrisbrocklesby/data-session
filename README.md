@@ -15,12 +15,13 @@ This project script is designed to work with HTML or HTMX, using `data-` attribu
 ### HTML Structure
 Form elements (inputs, textareas, selects) are tagged with `data-session` or `data-local` attributes to specify the storage type and key.
 
-### Example:
+### Quick Example:
 ```html
-<input data-session="name" type="text" name="name" placeholder="Name">
+<!-- Storing data in sessionStorage under the key 'data-session:name' -->
+<input data-session="name" type="text" name="name">
 
-<textarea data-local="message" name="message" placeholder="Message">  
-</textarea>
+<!-- Storing data in localStorage under the key 'data-local:message' -->
+<input data-local="message" type="text" name="message">
 ```
 
 ### HTMX Integration
