@@ -24,6 +24,9 @@ Form elements (inputs, textareas, selects) are tagged with `data-session` or `da
 <input data-local="message" type="text" name="message">
 ```
 
+### Page Load / Reload (or HTMX/AJAX Load)
+The data stored in those input values will re-populate in the last state from session or local storage. 
+
 ### HTMX Integration
 
 The script listens for HTMX events (htmx:afterSettle, htmx:afterSwap, htmx:load) to reinitialize the form data after dynamic content updates.
@@ -47,10 +50,19 @@ Add data-session or data-local attributes to your form elements:
 <!-- Storing data in localStorage under the key 'data-local:message' -->
 <textarea data-local="message" name="message" placeholder="Message"></textarea>
 ```
-Use the resetData function to clear stored data:
+Use the Clear Data functions to clear stored data on current page (DOM):
 
 ```html
-<button type="reset" onclick="resetData()">Reset Session Data</button>
+<!-- Clear all prefixed data-sessions data -->
+<button onclick="clearSessions()">Reset All Sessions</button>
+
+<!-- Clear all prefixed data-local data -->
+<button onclick="clearLocal()">Reset All Local Data</button>
+```
+
+Reset data and unset local or session data with a array of prefixed keys or change the value to '' in the input storge updates on keyup.
+```html
+<button onclick="removeData(['data-session:name','data-local:message'])">Remove Data with Key</button>
 ```
 
 ## Example

@@ -32,17 +32,27 @@ function restoreData(element) {
     }
 }
 
-function resetData() {
-    const reset = (selector, storage) => {
-        document.querySelectorAll(selector).forEach(element => {
-            const id = element.getAttribute(selector.slice(1, -1));
-            storage.removeItem(`${selector.slice(1)}:${id}`);
-            element.value = '';
-        });
-    };
+function removeData(keys) {
+    keys.forEach(key => {
+        sessionStorage.removeItem(`data-session:${key}`);
+        localStorage.removeItem(`data-local:${key}`);
+    });
+}
 
-    reset('[data-session]', sessionStorage);
-    reset('[data-local]', localStorage);
+function clearSessions() {
+    Object.keys(sessionStorage).forEach(key => {
+        if (key.startsWith('data-session:')) {
+            sessionStorage.removeItem(key);
+        }
+    });
+}
+
+function clearLocal() {
+    Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('data-local:')) {
+            localStorage.removeItem(key);
+        }
+    });
 }
 
 function initData() {
