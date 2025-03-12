@@ -71,7 +71,7 @@ Remove data and unset local or session data with an array of prefixed keys or ch
 ## Example
 See the provided /example/ directory for a complete example with session and local storage forms.
 
-Live URL: https://chrisbrocklesby.github.io/data-store-js/example/index.html
+Live URL: [https://chrisbrocklesby.github.io/data-store-js/example/index.html](https://chrisbrocklesby.github.io/data-store-js/example/index.html)
 
 ## Notes
 
