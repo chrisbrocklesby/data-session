@@ -51,7 +51,7 @@ Add data-session or data-local attributes to your form elements:
 <textarea data-local="message" name="message" placeholder="Message"></textarea>
 ```
 
-Reset data and unset local or session data with an array of prefixed keys or change the value to '' in the input value to remove the data... Wild card to delete all data is available `data-session:*`... `removeData([array])` is a function the needs an array of values even if single value is needed.
+Remove data and unset local or session data with an array of prefixed keys or change the value to '' in the input value to remove the data... Wild card to delete all data is available `data-session:*`... `removeData([array])` is a function the needs an array of values even if single value is needed.
 
 ```html
 <!-- Target key with prefix -->
@@ -65,7 +65,7 @@ Reset data and unset local or session data with an array of prefixed keys or cha
 ## Example
 See the provided /example/ directory for a complete example with session and local storage forms.
 
-Live URL: https://chrisbrocklesby.github.io/data-session/example/index.html
+Live URL: https://chrisbrocklesby.github.io/data-store-js/example/index.html
 
 ## Notes
 

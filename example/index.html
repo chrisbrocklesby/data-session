@@ -38,7 +38,7 @@
         <button type="submit">Submit</button>
 
 
-        <button type="reset" onclick="resetData()">Reset Session Data</button>
+        <button type="reset" onclick="removeData(['data-session:*'])">Reset Session Data</button>
     </form>
 
     <br /><br />
@@ -67,7 +67,7 @@
 
         <button type="submit">Submit</button>
 
-        <button type="reset" onclick="resetData()">Reset Local Data</button>
+        <button type="reset" onclick="removeData(['data-local:*'])">Reset Local Data</button>
 
     </form>
 
