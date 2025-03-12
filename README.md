@@ -24,6 +24,11 @@ Form elements (inputs, textareas, selects) are tagged with `data-session` or `da
 <input data-local="message" type="text" name="message">
 ```
 
+### Quick use (direct link)
+```html
+  <script src="https://chrisbrocklesby.github.io/data-store-js/datastore.min.js"></script>
+```
+
 ### Page Load / Reload (or HTMX/AJAX Load)
 The data stored in those input values will re-populate in the last state from session or local storage. 
 
