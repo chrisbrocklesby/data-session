@@ -85,7 +85,23 @@
                 Reset Local Data
             </button>
 
+            <input type="hidden" data-local="testhidden" value="hidden value" />
+
         </form>
+
+
+        <script>
+            function changeHiddenValue(key, value) {
+                document.querySelector(`[data-local="${key}"]`).value = value;
+            }
+        </script>
+        <br />
+        <button
+            class="outline secondary"
+            style="width: 100%;"
+            onclick="changeHiddenValue('testhidden', 'new hidden value')">
+            Change Hidden Input Value
+        </button>
 
         <br /><br />
         <hr /><br />

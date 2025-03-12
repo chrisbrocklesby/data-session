@@ -1,3 +1,11 @@
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 function storeData(element) {
     const store = (key, value, storage) => value ? storage.setItem(key, value) : storage.removeItem(key);
 
@@ -53,8 +61,14 @@ function initData() {
         restoreData(element);
         element.addEventListener('change', () => storeData(element));
 
-        if (['INPUT', 'TEXTAREA'].includes(element.tagName)) {
-            element.addEventListener('keyup', () => storeData(element));
+        if (['INPUT', 'TEXTAREA'].includes(element.tagName) && element.type !== 'hidden') {
+            element.addEventListener('keyup', debounce(() => storeData(element), 300));
+        }
+
+        // Use MutationObserver to detect changes to hidden inputs
+        if (element.type === 'hidden') {
+            const observer = new MutationObserver(() => storeData(element));
+            observer.observe(element, { attributes: true, attributeFilter: ['value'] });
         }
     });
 }
@@ -63,7 +77,9 @@ function initData() {
 document.addEventListener('DOMContentLoaded', initData);
 window.addEventListener('popstate', () => setTimeout(initData, 0));
 window.addEventListener('storage', event => {
-    (event.key && event.key.startsWith('data-')) ? initData() : null;
+    if (event.key && event.key.startsWith('data-')) {
+        initData();
+    }
 });
 
 // HTMX support
