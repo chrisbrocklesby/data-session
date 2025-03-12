@@ -50,19 +50,16 @@ Add data-session or data-local attributes to your form elements:
 <!-- Storing data in localStorage under the key 'data-local:message' -->
 <textarea data-local="message" name="message" placeholder="Message"></textarea>
 ```
-Use the Clear Data functions to clear stored data on current page (DOM):
+
+Reset data and unset local or session data with an array of prefixed keys or change the value to '' in the input value to remove the data... Wild card to delete all data is available `data-session:*`... `removeData([array])` is a function the needs an array of values even if single value is needed.
 
 ```html
-<!-- Clear all prefixed data-sessions data -->
-<button onclick="clearSessions()">Reset All Sessions</button>
+<!-- Target key with prefix -->
+<button onclick="removeData(['data-session:name','data-local:message'])">Remove Select Data</button>
 
-<!-- Clear all prefixed data-local data -->
-<button onclick="clearLocal()">Reset All Local Data</button>
-```
+<!-- Wild Card with prefix -->
+<button onclick="removeData(['data-session:*','data-local:*'])">Remove All Data</button>
 
-Reset data and unset local or session data with a array of prefixed keys or change the value to '' in the input storge updates on keyup.
-```html
-<button onclick="removeData(['data-session:name','data-local:message'])">Remove Data with Key</button>
 ```
 
 ## Example

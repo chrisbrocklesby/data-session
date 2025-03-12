@@ -34,22 +34,15 @@ function restoreData(element) {
 
 function removeData(keys) {
     keys.forEach(key => {
-        sessionStorage.removeItem(`data-session:${key}`);
-        localStorage.removeItem(`data-local:${key}`);
-    });
-}
-
-function clearSessions() {
-    Object.keys(sessionStorage).forEach(key => {
-        if (key.startsWith('data-session:')) {
+        if (key === 'data-session:*') {
+            Object.keys(sessionStorage).forEach(k => k.startsWith('data-session:') && sessionStorage.removeItem(k));
+        } else if (key.startsWith('data-session:')) {
             sessionStorage.removeItem(key);
         }
-    });
-}
 
-function clearLocal() {
-    Object.keys(localStorage).forEach(key => {
-        if (key.startsWith('data-local:')) {
+        if (key === 'data-local:*') {
+            Object.keys(localStorage).forEach(k => k.startsWith('data-local:') && localStorage.removeItem(k));
+        } else if (key.startsWith('data-local:')) {
             localStorage.removeItem(key);
         }
     });
