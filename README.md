@@ -63,8 +63,9 @@ Remove data and unset local or session data with an array of prefixed keys or ch
 <button onclick="removeData(['data-session:name','data-local:message'])">Remove Select Data</button>
 
 <!-- Wild Card with prefix -->
-<button onclick="removeData(['data-session:*','data-local:*'])">Remove All Data</button>
-
+<script>
+  removeData(['data-session:*','data-local:*'])
+</script>
 ```
 
 ## Example
